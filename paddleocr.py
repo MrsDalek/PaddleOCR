@@ -83,8 +83,8 @@ __all__ = [
     "convert_info_markdown",
 ]
 
-SUPPORT_DET_MODEL = ["DB"]
-SUPPORT_REC_MODEL = ["CRNN", "SVTR_LCNet"]
+SUPPORT_DET_MODEL = ["DB", "DB++", "DDRG", "EAST", "FCENet", "PSENet", "SAST"]
+SUPPORT_REC_MODEL = ["CRNN", "SVTR_LCNet", "ABINet", "NETR", "RARE", "RobusScanner", "SAR", "SPIN", "SRN", "SVTR", "VisionLAN", "ViTSTR"]
 BASE_DIR = os.path.expanduser("~/.paddleocr/")
 
 DEFAULT_OCR_MODEL_VERSION = "PP-OCRv4"
@@ -1051,3 +1051,6 @@ def main():
                 item.pop("res")
                 logger.info(item)
             logger.info("result save to {}".format(args.output))
+if __name__ == "__main__":
+    main()
+

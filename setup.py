@@ -12,7 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
-setup()
+setup(
+    name='my_paddleocr',  # Paketinizin adı
+    version='1.0.0',  # Paketinizin versiyonu
+    packages=find_packages(),  # Paketlenecek klasörleri belirtir
+    install_requires=[  # Bağımlılıkları listeler
+        'paddlepaddle',  # veya 'paddlepaddle-gpu', CUDA sürümünüze göre
+        'opencv-python',
+        # Diğer bağımlılıklar
+    ],
+)
